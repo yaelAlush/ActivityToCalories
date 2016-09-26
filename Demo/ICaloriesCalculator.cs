@@ -7,12 +7,11 @@ namespace Demo
     public interface ICaloriesCalculator
     {
         [OperationContract]
-        [WebGet]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         ActivityDetailes[] GetAllActivities();
 
         [OperationContract]
-        [WebGet]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         int GetBurnedCalories(string id, int trainingMinutes);
     }
-
 }
